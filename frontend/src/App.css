@@ -1,0 +1,101 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Main Layout */
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Left and Right Sections */
+main .left, main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+/* Left Section (Code Editor) */
+main .left {
+  background-color: #000000;
+  position: relative;
+}
+
+/* Code Editor Styling */
+.left .code, .code pre, .code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+  color: white;
+  font-size: 1rem;
+}
+
+/* Review Button (Bottom-Right in Left Panel) */
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  transition: background 0.3s ease;
+}
+
+.review:hover {
+  background-color: rgb(190, 190, 255);
+}
+
+/* Right Section (Review Output) */
+main .right {
+  background-color: #343434;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  overflow: auto;
+  position: relative;
+  color: white;
+  border-radius: 0.7rem;
+}
+
+/* Copy Review Button (Bottom-Right in Right Panel) */
+.copy-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(144, 238, 144); /* Light Green */
+  color: #000000;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  transition: background 0.3s ease;
+}
+
+.copy-btn:hover {
+  background-color: rgb(100, 200, 100);
+}
+
+/* Loading Text Styling */
+.loading-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
