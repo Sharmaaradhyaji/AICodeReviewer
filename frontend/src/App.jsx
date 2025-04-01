@@ -16,6 +16,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [darkMode, setDarkMode] = useState(true); // Dark mode state
 
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
   useEffect(() => {
     prism.highlightAll();
   }, []);
@@ -23,7 +25,7 @@ function App() {
   async function reviewCode() {
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:3000/ai/get-review", {
+      const response = await axios.post(backendUrl + "/ai/get-review", {
         code,
       });
       setReview(response.data);
